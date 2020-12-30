@@ -3,6 +3,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Contact
 from .serializers import ContactSerializer
+
+
+
 class ContactAPIView(APIView):
     def get(self, request, format=None):
         contact=Contact.objects.all()
